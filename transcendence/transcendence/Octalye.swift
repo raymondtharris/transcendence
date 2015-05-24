@@ -10,7 +10,15 @@ import Foundation
 
 class Octalye: NSObject {
     var Name: String
-    init(newName: String) {
+    var Level: Int
+    var Health: Int
+    init(newName: String, newLevel: Int, newHealth: Int) {
         self.Name = newName
+        self.Level = newLevel
+        self.Health = newHealth
+    }
+    func calculateFeeling() -> Int {
+        //calculateFeeling Determines the emotion of the Octalye
+        return 1
     }
 }

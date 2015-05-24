@@ -14,6 +14,7 @@
 		228648651B11ACB300CC018C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228648631B11ACB300CC018C /* LaunchScreen.xib */; };
 		228648711B11ACB400CC018C /* transcendenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228648701B11ACB400CC018C /* transcendenceTests.swift */; };
 		2286487B1B11AD8E00CC018C /* Octalye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286487A1B11AD8E00CC018C /* Octalye.swift */; };
+		2286487D1B11B9DD00CC018C /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286487C1B11B9DD00CC018C /* Phase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2286486F1B11ACB300CC018C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		228648701B11ACB400CC018C /* transcendenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transcendenceTests.swift; sourceTree = "<group>"; };
 		2286487A1B11AD8E00CC018C /* Octalye.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Octalye.swift; sourceTree = "<group>"; };
+		2286487C1B11B9DD00CC018C /* Phase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				2286485A1B11ACB300CC018C /* AppDelegate.swift */,
 				2286487A1B11AD8E00CC018C /* Octalye.swift */,
+				2286487C1B11B9DD00CC018C /* Phase.swift */,
 				2286485C1B11ACB300CC018C /* ViewController.swift */,
 				2286485E1B11ACB300CC018C /* Main.storyboard */,
 				228648611B11ACB300CC018C /* Images.xcassets */,
@@ -218,6 +221,7 @@
 				2286485D1B11ACB300CC018C /* ViewController.swift in Sources */,
 				2286485B1B11ACB300CC018C /* AppDelegate.swift in Sources */,
 				2286487B1B11AD8E00CC018C /* Octalye.swift in Sources */,
+				2286487D1B11B9DD00CC018C /* Phase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
