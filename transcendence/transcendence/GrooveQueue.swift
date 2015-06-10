@@ -24,16 +24,31 @@ class GrooveQueue: NSObject {
     var currentGrooveNode: GrooveNode? = nil
     var First: GrooveNode? = nil
     var Last: GrooveNode? = nil
+    var grooveMultiplier: Int
     var Length: Int
     override init() {
         self.Length = 0
+        self.grooveMultiplier = 0
     }
     
     func enqueue(newGroove:GrooveNode) {
-        
+        if let hasHead = self.First {
+            self.Last?.next = newGroove
+            self.Last = newGroove
+        }else{
+            self.First = newGroove
+            self.Last = self.First
+        }
+        self.Length++
     }
     
     func dequeue() -> GrooveNode? {
+        if let hasHead = self.First {
+            var returnNode = hasHead
+            self.First = self.First?.next
+            self.Length--
+            return returnNode
+        }
         return nil
     }
     
@@ -42,6 +57,25 @@ class GrooveQueue: NSObject {
             return false
         }
         return true
+    }
+    
+    func grooveComboCheck() {
+        var newGrooveNode = self.dequeue()
+        if let hasNewGroove = newGrooveNode {
+            if hasNewGroove.grooveType == currentGrooveNode!.grooveType {
+                print("Combo the Groove.")
+            }
+        }
+    }
+    
+    func calculateGrooveCombo(currentGrooveNode: GrooveNode, newGrooveNode: GrooveNode) {
+        if currentGrooveNode.grooveName == newGrooveNode.grooveName {
+            self.grooveMultiplier++
+        } else {
+            print("Fusion Groove")
+            // use fusion calculator to determine new Fusion Groove
+            self.grooveMultiplier = 2
+        }
     }
 }
 
