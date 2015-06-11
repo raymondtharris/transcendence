@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22503E121B292F6E00FE316A /* Kahr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22503E111B292F6E00FE316A /* Kahr.swift */; };
 		2286485B1B11ACB300CC018C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286485A1B11ACB300CC018C /* AppDelegate.swift */; };
 		2286485D1B11ACB300CC018C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286485C1B11ACB300CC018C /* ViewController.swift */; };
 		228648601B11ACB300CC018C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2286485E1B11ACB300CC018C /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22503E111B292F6E00FE316A /* Kahr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kahr.swift; sourceTree = "<group>"; };
 		228648551B11ACB300CC018C /* transcendence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transcendence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228648591B11ACB300CC018C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2286485A1B11ACB300CC018C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				2286487A1B11AD8E00CC018C /* Octalye.swift */,
 				22A2E34D1B26A4870039F658 /* GrooveQueue.swift */,
 				2286487C1B11B9DD00CC018C /* Phase.swift */,
+				22503E111B292F6E00FE316A /* Kahr.swift */,
 				2286485C1B11ACB300CC018C /* ViewController.swift */,
 				2286485E1B11ACB300CC018C /* Main.storyboard */,
 				228648611B11ACB300CC018C /* Images.xcassets */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A2E34E1B26A4870039F658 /* GrooveQueue.swift in Sources */,
+				22503E121B292F6E00FE316A /* Kahr.swift in Sources */,
 				2286485D1B11ACB300CC018C /* ViewController.swift in Sources */,
 				2286485B1B11ACB300CC018C /* AppDelegate.swift in Sources */,
 				2286487B1B11AD8E00CC018C /* Octalye.swift in Sources */,

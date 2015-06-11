@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Octalye: NSObject {
     var Name: String
     var Level: Int

@@ -8,15 +8,37 @@
 
 import Foundation
 
+enum typeGroove {
+    case FreeStyle
+    case Metered
+    case Flow
+}
+
+enum nameGroove {
+    case Lucid
+    case Synccopation
+    case Polyrhythmic
+    case OverBar
+    case OddTime
+    case Jam
+    case Shuffle
+    
+}
+
 class GrooveNode: NSObject {
     var grooveDuration: Int
-    var grooveType: String
-    var grooveName: String
+    var grooveType: typeGroove
+    var grooveName: nameGroove
     var next: GrooveNode? = nil
     override init() {
         self.grooveDuration = 4
-        self.grooveType = "FreeStyle"
-        self.grooveName = "Lucid"
+        self.grooveType = typeGroove.FreeStyle
+        self.grooveName = nameGroove.Lucid
+    }
+    init(grooveDuration: Int, grooveType: typeGroove, grooveName: nameGroove) {
+        self.grooveDuration = grooveDuration
+        self.grooveType = grooveType
+        self.grooveName = grooveName
     }
 }
 
