@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum typePhase {
+enum namePhase {
     //Harmony Phases
     case Joy
     case Echo
@@ -22,11 +22,15 @@ enum typePhase {
     case Oblivion
     case Armageddon
 }
+enum typePhase {
+    case Harmony
+    case Chaos
+}
 
 class Phase: NSObject {
-    var Name: String
+    var Name: namePhase
     var phaseType: typePhase
-    init(newName: String, newPhaseType: typePhase) {
+    init(newName: namePhase, newPhaseType: typePhase) {
         self.Name = newName
         self.phaseType = newPhaseType
     }
