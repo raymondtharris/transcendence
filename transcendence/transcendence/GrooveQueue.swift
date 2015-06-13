@@ -23,6 +23,17 @@ enum nameGroove {
     case Jam
     case Shuffle
     
+    var description: String {
+        switch self {
+        case .Lucid: return "Lucid"
+        case .Synccopation: return "Synccopation"
+        case .Polyrhythmic: return "Polyrhythmic"
+        case .OverBar: return "OverBar"
+        case .OddTime: return "OddTime"
+        case .Jam: return "Jam"
+        case .Shuffle: return "Shuffle"
+        }
+    }
 }
 
 class GrooveNode: NSObject {
