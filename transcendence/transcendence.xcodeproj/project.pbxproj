@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2244B9511B326C5700B6AC82 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2244B9501B326C5700B6AC82 /* GameViewController.swift */; };
 		22503E121B292F6E00FE316A /* Kahr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22503E111B292F6E00FE316A /* Kahr.swift */; };
 		2286485B1B11ACB300CC018C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286485A1B11ACB300CC018C /* AppDelegate.swift */; };
 		2286485D1B11ACB300CC018C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286485C1B11ACB300CC018C /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2244B9501B326C5700B6AC82 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		22503E111B292F6E00FE316A /* Kahr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kahr.swift; sourceTree = "<group>"; };
 		228648551B11ACB300CC018C /* transcendence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transcendence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228648591B11ACB300CC018C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				22503E111B292F6E00FE316A /* Kahr.swift */,
 				228E91B41B2A82B400F8F995 /* Player.swift */,
 				2286485C1B11ACB300CC018C /* ViewController.swift */,
+				2244B9501B326C5700B6AC82 /* GameViewController.swift */,
 				2286485E1B11ACB300CC018C /* Main.storyboard */,
 				228648611B11ACB300CC018C /* Images.xcassets */,
 				228648631B11ACB300CC018C /* LaunchScreen.xib */,
@@ -171,11 +174,13 @@
 		2286484D1B11ACB300CC018C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Tim Harris";
 				TargetAttributes = {
 					228648541B11ACB300CC018C = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 68W5V575MP;
 					};
 					228648691B11ACB300CC018C = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -231,6 +236,7 @@
 				22503E121B292F6E00FE316A /* Kahr.swift in Sources */,
 				2286485D1B11ACB300CC018C /* ViewController.swift in Sources */,
 				2286485B1B11ACB300CC018C /* AppDelegate.swift in Sources */,
+				2244B9511B326C5700B6AC82 /* GameViewController.swift in Sources */,
 				228E91B51B2A82B400F8F995 /* Player.swift in Sources */,
 				2286487B1B11AD8E00CC018C /* Octalye.swift in Sources */,
 				2286487D1B11B9DD00CC018C /* Phase.swift in Sources */,
@@ -296,6 +302,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -362,9 +369,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = transcendence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newFX.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -372,9 +383,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = transcendence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newFX.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -392,6 +407,7 @@
 				);
 				INFOPLIST_FILE = transcendenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newFX.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/transcendence.app/transcendence";
 			};
@@ -407,6 +423,7 @@
 				);
 				INFOPLIST_FILE = transcendenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newFX.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/transcendence.app/transcendence";
 			};

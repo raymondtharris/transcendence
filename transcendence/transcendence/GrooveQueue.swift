@@ -65,7 +65,7 @@ class GrooveQueue: NSObject {
     }
     
     func enqueue(newGroove:GrooveNode) {
-        if let hasHead = self.First {
+        if let _ = self.First {
             self.Last?.next = newGroove
             self.Last = newGroove
         }else{
@@ -77,7 +77,7 @@ class GrooveQueue: NSObject {
     
     func dequeue() -> GrooveNode? {
         if let hasHead = self.First {
-            var returnNode = hasHead
+            let returnNode = hasHead
             self.First = self.First?.next
             self.Length--
             return returnNode
@@ -93,7 +93,7 @@ class GrooveQueue: NSObject {
     }
     
     func grooveComboCheck() {
-        var newGrooveNode = self.dequeue()
+        let newGrooveNode = self.dequeue()
         if let hasNewGroove = newGrooveNode {
             if hasNewGroove.grooveType == currentGrooveNode!.grooveType {
                 print("Combo the Groove.")

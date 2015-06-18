@@ -33,12 +33,14 @@ class ViewController: UIViewController {
     }
     
     func updateCheck(timer: NSTimer) {
-        if playerObject.comboQueue.currentGrooveNode?.grooveDuration > 0 {
+        if playerObject.comboQueue.currentGrooveNode?.grooveDuration > 0{
             playerObject.comboQueue.currentGrooveNode?.grooveDuration--
         } else {
-            playerObject.comboQueue.currentGrooveNode = playerObject.comboQueue.dequeue()
+            //if let hasMoreNodes = playerObject.comboQueue.dequeue() {
+                playerObject.comboQueue.currentGrooveNode = playerObject.comboQueue.dequeue()
+           // }
         }
-        println("GrooveName \(playerObject.comboQueue.currentGrooveNode!.grooveName.description)  grooveDuration \(playerObject.comboQueue.currentGrooveNode!.grooveDuration)")
+        print("GrooveName \(playerObject.comboQueue.currentGrooveNode!.grooveName.description)  grooveDuration \(playerObject.comboQueue.currentGrooveNode!.grooveDuration)")
     }
 
 }
