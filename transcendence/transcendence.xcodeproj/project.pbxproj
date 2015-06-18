@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2244B9511B326C5700B6AC82 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2244B9501B326C5700B6AC82 /* GameViewController.swift */; };
+		2244B9531B32835300B6AC82 /* ShaderTest.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2244B9521B32835300B6AC82 /* ShaderTest.metal */; };
 		22503E121B292F6E00FE316A /* Kahr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22503E111B292F6E00FE316A /* Kahr.swift */; };
 		2286485B1B11ACB300CC018C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286485A1B11ACB300CC018C /* AppDelegate.swift */; };
 		2286485D1B11ACB300CC018C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286485C1B11ACB300CC018C /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		2244B9501B326C5700B6AC82 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2244B9521B32835300B6AC82 /* ShaderTest.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ShaderTest.metal; sourceTree = "<group>"; };
 		22503E111B292F6E00FE316A /* Kahr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kahr.swift; sourceTree = "<group>"; };
 		228648551B11ACB300CC018C /* transcendence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transcendence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228648591B11ACB300CC018C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				228E91B41B2A82B400F8F995 /* Player.swift */,
 				2286485C1B11ACB300CC018C /* ViewController.swift */,
 				2244B9501B326C5700B6AC82 /* GameViewController.swift */,
+				2244B9521B32835300B6AC82 /* ShaderTest.metal */,
 				2286485E1B11ACB300CC018C /* Main.storyboard */,
 				228648611B11ACB300CC018C /* Images.xcassets */,
 				228648631B11ACB300CC018C /* LaunchScreen.xib */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2244B9531B32835300B6AC82 /* ShaderTest.metal in Sources */,
 				22A2E34E1B26A4870039F658 /* GrooveQueue.swift in Sources */,
 				22503E121B292F6E00FE316A /* Kahr.swift in Sources */,
 				2286485D1B11ACB300CC018C /* ViewController.swift in Sources */,
