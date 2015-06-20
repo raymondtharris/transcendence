@@ -10,10 +10,11 @@ import Foundation
 
 
 class Octalye: NSObject {
-    var Name: String
-    var Level: Int
-    var Health: Int
+    var Name: String // Name of the Octalye
+    var Level: Int // Level of the Octalye
+    var Health: Int // Value of the Health of the Octalye
     init(newName: String, newLevel: Int, newHealth: Int) {
+        // Init function of Octalye with parameter to make a particular one.
         self.Name = newName
         self.Level = newLevel
         self.Health = newHealth
