@@ -20,6 +20,7 @@
 		2286487D1B11B9DD00CC018C /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286487C1B11B9DD00CC018C /* Phase.swift */; };
 		228E91B51B2A82B400F8F995 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228E91B41B2A82B400F8F995 /* Player.swift */; };
 		22A2E34E1B26A4870039F658 /* GrooveQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2E34D1B26A4870039F658 /* GrooveQueue.swift */; };
+		22FB8E0F1B3902FB00352F10 /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB8E0E1B3902FB00352F10 /* RenderNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		2286487C1B11B9DD00CC018C /* Phase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
 		228E91B41B2A82B400F8F995 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		22A2E34D1B26A4870039F658 /* GrooveQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrooveQueue.swift; sourceTree = "<group>"; };
+		22FB8E0E1B3902FB00352F10 /* RenderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				22503E111B292F6E00FE316A /* Kahr.swift */,
 				228E91B41B2A82B400F8F995 /* Player.swift */,
 				2286485C1B11ACB300CC018C /* ViewController.swift */,
+				22FB8E0E1B3902FB00352F10 /* RenderNode.swift */,
 				2244B9501B326C5700B6AC82 /* GameViewController.swift */,
 				2244B9521B32835300B6AC82 /* ShaderTest.metal */,
 				2286485E1B11ACB300CC018C /* Main.storyboard */,
@@ -244,6 +247,7 @@
 				228E91B51B2A82B400F8F995 /* Player.swift in Sources */,
 				2286487B1B11AD8E00CC018C /* Octalye.swift in Sources */,
 				2286487D1B11B9DD00CC018C /* Phase.swift in Sources */,
+				22FB8E0F1B3902FB00352F10 /* RenderNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

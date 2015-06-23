@@ -36,9 +36,9 @@ class ViewController: UIViewController {
         if playerObject.comboQueue.currentGrooveNode?.grooveDuration > 0{
             playerObject.comboQueue.currentGrooveNode?.grooveDuration--
         } else {
-            //if let hasMoreNodes = playerObject.comboQueue.dequeue() {
+            if playerObject.comboQueue.Length > 0  {
                 playerObject.comboQueue.currentGrooveNode = playerObject.comboQueue.dequeue()
-           // }
+            }
         }
         print("GrooveName \(playerObject.comboQueue.currentGrooveNode!.grooveName.description)  grooveDuration \(playerObject.comboQueue.currentGrooveNode!.grooveDuration)")
     }
