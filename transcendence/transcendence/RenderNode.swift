@@ -57,3 +57,16 @@ class RenderNode {
         commandBuffer.commit()
     }
 }
+
+
+class Triangle: RenderNode {
+    init(device: MTLDevice){
+        
+        let V0 = RenderVertex(x: 0.0, y: 1.0, z: 0.0, r: 1.0, g: 0.0, b: 0.0, a: 1.0)
+        let V1 = RenderVertex(x: -1.0, y: -1.0, z: 0.0, r: 0.0, g: 1.0, b: 0.0, a: 1.0)
+        let V2 = RenderVertex(x: 1.0, y: -1.0, z: 0.0, r: 0.0, g: 0.0, b: 1.0, a: 1.0)
+        
+        let VertexArray = [V0,V1,V2]
+        super.init(name: "Triangle", verticies: VertexArray, device: device)
+    }
+}

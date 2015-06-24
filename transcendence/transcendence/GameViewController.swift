@@ -15,9 +15,11 @@ class GameViewController: UIViewController {
     var device:MTLDevice! = nil
     var metalLayer:CAMetalLayer! = nil
     
-    let vertexData:[Float] = [0.0, 1.0, 0.0,-1.0, -1.0, 0.0,1.0, -1.0, 0.0]
+    //let vertexData:[Float] = [0.0, 1.0, 0.0,-1.0, -1.0, 0.0,1.0, -1.0, 0.0]
     
-    var vertexBuffer: MTLBuffer! = nil
+    //var vertexBuffer: MTLBuffer! = nil
+    var objectToDraw: Triangle!
+    
     var pipelineState: MTLRenderPipelineState! = nil
     var commandQueue: MTLCommandQueue! = nil
     var displayLink: CADisplayLink! = nil
@@ -32,8 +34,10 @@ class GameViewController: UIViewController {
         metalLayer.frame = view.layer.frame
         view.layer.addSublayer(metalLayer)
         
-        let dataSize:Int = vertexData.count * sizeofValue(vertexData[0])
-        vertexBuffer = self.device.newBufferWithBytes(vertexData, length: dataSize, options: MTLResourceOptions.OptionCPUCacheModeDefault)
+        //let dataSize:Int = vertexData.count * sizeofValue(vertexData[0])
+        //vertexBuffer = self.device.newBufferWithBytes(vertexData, length: dataSize, options: MTLResourceOptions.OptionCPUCacheModeDefault)
+        objectToDraw = Triangle(device: device)
+        
         
         let defaultLibrary = device.newDefaultLibrary()
         let fragmentProgram = defaultLibrary!.newFunctionWithName("basic_fragment")
@@ -61,7 +65,9 @@ class GameViewController: UIViewController {
     
     func render(){
         let drawable = metalLayer.nextDrawable()
+        objectToDraw.render(commandQueue, pipelineState: pipelineState, drawable: drawable!, clearColor: nil)
         
+       /*
         let renderPassDescriptor = MTLRenderPassDescriptor()
         renderPassDescriptor.colorAttachments[0].texture = drawable?.texture
         renderPassDescriptor.colorAttachments[0].loadAction = .Clear
@@ -77,7 +83,7 @@ class GameViewController: UIViewController {
         
         commandBuffer.presentDrawable(drawable!)
         commandBuffer.commit()
-        
+        */
         
     }
     func gameloop(){
