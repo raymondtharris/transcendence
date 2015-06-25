@@ -16,16 +16,20 @@ struct RenderVertex {
     var r,g,b,a: Float // Color Data
     
     func dataBuffer() -> [Float]{
+        // dataBuffer returns an array of all the RenderVertex data formated in the order that it is set up in the struct
         return [x,y,z,r,g,b,a]
     }
 }
 
 class RenderNode {
-    let name:String
-    var vertexCount: Int
-    var vertexBuffer: MTLBuffer
-    var device: MTLDevice
+    // Base RenderNode Class
+    let name:String // Name of the node
+    var vertexCount: Int // Number of vertecies then node has
+    var vertexBuffer: MTLBuffer // Vertex Buffer for the node
+    var device: MTLDevice // Device to use for node
+    
     init(name: String, verticies: Array<RenderVertex>, device: MTLDevice) {
+        // Init function for the RenderNode class
         var vertexData = Array<Float>()
         for vertex in verticies {
             vertexData += vertex.dataBuffer()
@@ -40,6 +44,7 @@ class RenderNode {
     }
     
     func render(commandQueue: MTLCommandQueue, pipelineState: MTLRenderPipelineState, drawable: CAMetalDrawable, clearColor:MTLClearColor?) {
+        // Render function 
         let renderPassDescriptor = MTLRenderPassDescriptor()
         renderPassDescriptor.colorAttachments[0].texture = drawable.texture
         renderPassDescriptor.colorAttachments[0].loadAction = .Clear
