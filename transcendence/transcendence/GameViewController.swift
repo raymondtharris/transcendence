@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     //let vertexData:[Float] = [0.0, 1.0, 0.0,-1.0, -1.0, 0.0,1.0, -1.0, 0.0]
     
     //var vertexBuffer: MTLBuffer! = nil
-    var objectToDraw: Triangle!
+    var objectToDraw: Cube!//Triangle!
     
     var pipelineState: MTLRenderPipelineState! = nil
     var commandQueue: MTLCommandQueue! = nil
@@ -36,7 +36,7 @@ class GameViewController: UIViewController {
         
         //let dataSize:Int = vertexData.count * sizeofValue(vertexData[0])
         //vertexBuffer = self.device.newBufferWithBytes(vertexData, length: dataSize, options: MTLResourceOptions.OptionCPUCacheModeDefault)
-        objectToDraw = Triangle(device: device)
+        objectToDraw = Cube(device: device)//Triangle(device: device)
         
         
         let defaultLibrary = device.newDefaultLibrary()
