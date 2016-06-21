@@ -9,14 +9,14 @@
 import Foundation
 
 enum typeKahre { // the types of Kahre energy that comes at the player
-    case Red
-    case Blue
-    case Green
-    case Purple
-    case Yellow
-    case Orange
-    case White
-    case Black
+    case red
+    case blue
+    case green
+    case purple
+    case yellow
+    case orange
+    case white
+    case black
 }
 
 class Kahre: NSObject {
@@ -24,7 +24,7 @@ class Kahre: NSObject {
     var intensity: Int // the intensity of power of the kahre
     override init() {
         //Basic init function for the kahre class
-        self.kahreType = typeKahre.Blue
+        self.kahreType = typeKahre.blue
         self.intensity = 2
     }
     init(kahreType: typeKahre, intensity: Int) {

@@ -36,29 +36,29 @@ class RenderNode {
         }
         
         let dataSize = vertexData.count * sizeofValue(vertexData[0])
-        vertexBuffer = device.newBufferWithBytes(vertexData, length: dataSize, options: MTLResourceOptions.OptionCPUCacheModeDefault)
+        vertexBuffer = device.newBuffer(withBytes: vertexData, length: dataSize, options: MTLResourceOptions())
         
         self.name = name
         self.device = device
         vertexCount = verticies.count
     }
     
-    func render(commandQueue: MTLCommandQueue, pipelineState: MTLRenderPipelineState, drawable: CAMetalDrawable, clearColor:MTLClearColor?) {
+    func render(_ commandQueue: MTLCommandQueue, pipelineState: MTLRenderPipelineState, drawable: CAMetalDrawable, clearColor:MTLClearColor?) {
         // Render function 
         let renderPassDescriptor = MTLRenderPassDescriptor()
         renderPassDescriptor.colorAttachments[0].texture = drawable.texture
-        renderPassDescriptor.colorAttachments[0].loadAction = .Clear
+        renderPassDescriptor.colorAttachments[0].loadAction = .clear
         renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColor(red: 0.0, green: 104.0/255.0, blue: 5.0/255.0, alpha: 1.0)
         
         let commandBuffer = commandQueue.commandBuffer()
         
-        let renderEncodeOpt = commandBuffer.renderCommandEncoderWithDescriptor(renderPassDescriptor)
+        let renderEncodeOpt = commandBuffer.renderCommandEncoder(with: renderPassDescriptor)
         renderEncodeOpt.setRenderPipelineState(pipelineState)
-        renderEncodeOpt.setVertexBuffer(vertexBuffer, offset: 0, atIndex: 0)
-        renderEncodeOpt.drawPrimitives(.Triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
+        renderEncodeOpt.setVertexBuffer(vertexBuffer, offset: 0, at: 0)
+        renderEncodeOpt.drawPrimitives(.triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
         renderEncodeOpt.endEncoding()
         
-        commandBuffer.presentDrawable(drawable)
+        commandBuffer.present(drawable)
         commandBuffer.commit()
     }
 }

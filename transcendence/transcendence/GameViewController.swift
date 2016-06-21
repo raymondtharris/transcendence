@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
         device  = MTLCreateSystemDefaultDevice()
         metalLayer = CAMetalLayer()
         metalLayer.device = device
-        metalLayer.pixelFormat = .BGRA8Unorm
+        metalLayer.pixelFormat = .bgra8Unorm
         metalLayer.framebufferOnly = true
         metalLayer.frame = view.layer.frame
         view.layer.addSublayer(metalLayer)
@@ -40,24 +40,24 @@ class GameViewController: UIViewController {
         
         
         let defaultLibrary = device.newDefaultLibrary()
-        let fragmentProgram = defaultLibrary!.newFunctionWithName("basic_fragment")
-        let vertexProgram = defaultLibrary!.newFunctionWithName("basic_vertex")
+        let fragmentProgram = defaultLibrary!.newFunction(withName: "basic_fragment")
+        let vertexProgram = defaultLibrary!.newFunction(withName: "basic_vertex")
         
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexProgram!
         pipelineDescriptor.fragmentFunction = fragmentProgram!
-        pipelineDescriptor.colorAttachments[0].pixelFormat = .BGRA8Unorm
+        pipelineDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
         
-        var pipelineError:NSError?
+        let pipelineError:NSError?
         do{
-            try pipelineState = device.newRenderPipelineStateWithDescriptor(pipelineDescriptor)
+            try pipelineState = device.newRenderPipelineState(with: pipelineDescriptor)
         } catch{
            print("Failed to create pipeline state, error \(pipelineError)")
         }
         commandQueue = device.newCommandQueue()
         
         displayLink = CADisplayLink(target: self, selector: Selector("gameloop"))
-        displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+        displayLink.add(to: RunLoop.main(), forMode: RunLoopMode.defaultRunLoopMode.rawValue)
         
         
         

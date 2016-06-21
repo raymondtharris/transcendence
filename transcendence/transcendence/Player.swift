@@ -19,7 +19,7 @@ class Player: NSObject {
         // Basic init function that gives some default values for the player setup
         self.Emmi = Octalye(newName: "Emmi", newLevel: 1, newHealth: 20)
         self.Leah = Octalye(newName: "Leah", newLevel: 1, newHealth: 20)
-        self.playerPhase = Phase(newName: namePhase.Joy, newPhaseType: typePhase.Harmony)
+        self.playerPhase = Phase(newName: namePhase.joy, newPhaseType: typePhase.harmony)
         self.comboQueue = GrooveQueue()
         self.Experience = 0
         self.Feeling = "Neutral"

@@ -9,29 +9,29 @@
 import Foundation
 
 enum typeGroove { // Types of Grooves
-    case FreeStyle
-    case Metered
-    case Flow
+    case freeStyle
+    case metered
+    case flow
 }
 
 enum nameGroove { // Names of Grooves
-    case Lucid
-    case Synccopation
-    case Polyrhythmic
-    case OverBar
-    case OddTime
-    case Jam
-    case Shuffle
+    case lucid
+    case synccopation
+    case polyrhythmic
+    case overBar
+    case oddTime
+    case jam
+    case shuffle
     
     var description: String {  //print string for groove names
         switch self {
-        case .Lucid: return "Lucid"
-        case .Synccopation: return "Synccopation"
-        case .Polyrhythmic: return "Polyrhythmic"
-        case .OverBar: return "OverBar"
-        case .OddTime: return "OddTime"
-        case .Jam: return "Jam"
-        case .Shuffle: return "Shuffle"
+        case .lucid: return "Lucid"
+        case .synccopation: return "Synccopation"
+        case .polyrhythmic: return "Polyrhythmic"
+        case .overBar: return "OverBar"
+        case .oddTime: return "OddTime"
+        case .jam: return "Jam"
+        case .shuffle: return "Shuffle"
         }
     }
 }
@@ -44,8 +44,8 @@ class GrooveNode: NSObject {
     override init() {
         // Basic init function with some default values
         self.grooveDuration = 4
-        self.grooveType = typeGroove.FreeStyle
-        self.grooveName = nameGroove.Lucid
+        self.grooveType = typeGroove.freeStyle
+        self.grooveName = nameGroove.lucid
     }
     init(grooveDuration: Int, grooveType: typeGroove, grooveName: nameGroove) {
         
@@ -66,7 +66,7 @@ class GrooveQueue: NSObject {
         self.grooveMultiplier = 0
     }
     
-    func enqueue(newGroove:GrooveNode) {
+    func enqueue(_ newGroove:GrooveNode) {
         if let _ = self.First {
             self.Last?.next = newGroove
             self.Last = newGroove
@@ -74,14 +74,14 @@ class GrooveQueue: NSObject {
             self.First = newGroove
             self.Last = self.First
         }
-        self.Length++
+        self.Length += 1
     }
     
     func dequeue() -> GrooveNode? {
         if let hasHead = self.First {
             let returnNode = hasHead
             self.First = self.First?.next
-            self.Length--
+            self.Length -= 1
             return returnNode
         }
         return nil
@@ -103,9 +103,9 @@ class GrooveQueue: NSObject {
         }
     }
     
-    func calculateGrooveCombo(currentGrooveNode: GrooveNode, newGrooveNode: GrooveNode) {
+    func calculateGrooveCombo(_ currentGrooveNode: GrooveNode, newGrooveNode: GrooveNode) {
         if currentGrooveNode.grooveName == newGrooveNode.grooveName {
-            self.grooveMultiplier++
+            self.grooveMultiplier += 1
         } else {
             print("Fusion Groove")
             // use fusion calculator to determine new Fusion Groove

@@ -10,21 +10,21 @@ import Foundation
 
 enum namePhase { //Names of all available phases
     //Harmony Phases
-    case Joy
-    case Echo
-    case Order
-    case Regen
-    case Serenity
+    case joy
+    case echo
+    case order
+    case regen
+    case serenity
     //Chaos Phases
-    case Misery
-    case Astral
-    case Nova
-    case Oblivion
-    case Armageddon
+    case misery
+    case astral
+    case nova
+    case oblivion
+    case armageddon
 }
 enum typePhase { //All types of phases
-    case Harmony
-    case Chaos
+    case harmony
+    case chaos
 }
 
 class Phase: NSObject {
