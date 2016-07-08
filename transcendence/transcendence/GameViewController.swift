@@ -52,7 +52,7 @@ class GameViewController: UIViewController {
         do{
             try pipelineState = device.newRenderPipelineState(with: pipelineDescriptor)
         } catch{
-           print("Failed to create pipeline state, error \(pipelineError)")
+           print("Failed to create pipeline state, error ")
         }
         commandQueue = device.newCommandQueue()
         

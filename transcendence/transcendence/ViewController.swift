@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     func updateCheck(_ timer: Timer) {
         if playerObject.comboQueue.currentGrooveNode?.grooveDuration > 0{
-            playerObject.comboQueue.currentGrooveNode?.grooveDuration--
+            playerObject.comboQueue.currentGrooveNode?.grooveDuration -= 1
         } else {
             if playerObject.comboQueue.Length > 0  {
                 playerObject.comboQueue.currentGrooveNode = playerObject.comboQueue.dequeue()
