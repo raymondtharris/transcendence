@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreMotion
 
 class GameplayViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class GameplayViewController: UIViewController {
     
     // IVars
     var loadData = 0
+    let gyroManager = CMMotionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +26,32 @@ class GameplayViewController: UIViewController {
         
         // Check for loaded data to see if new game or continue.
         
+        
+        
+        // Gyroscope Setup
+        if gyroManager.isGyroAvailable {
+            gyroManager.gyroUpdateInterval = 0.1
+            //gyroManager.startGyroUpdates()
+            
+            gyroManager.startGyroUpdates(to: OperationQueue.main()) {
+                (data, error) in
+                
+            }
+            
+        }
     }
     
     @IBAction func togglePauseMenu(_ sender: AnyObject) {
         if pauseMenuView.isHidden {
             // Add Animation to show view.
             pauseMenuView.isHidden = false
+            gyroManager.stopGyroUpdates()
+        } else {
+            pauseMenuView.isHidden = true
+            gyroManager.startGyroUpdates(to: OperationQueue.main()) {
+                (data, error) in
+                
+            }
         }
     }
     
