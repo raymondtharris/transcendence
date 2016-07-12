@@ -106,7 +106,7 @@
                         <viewControllerLayoutGuide type="top" id="eSD-8S-ueC"/>
                         <viewControllerLayoutGuide type="bottom" id="dRf-G0-KQw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1eA-fl-vh8">
+                    <view key="view" contentMode="scaleToFill" id="1eA-fl-vh8" customClass="MTKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -126,16 +126,25 @@
                                         <frame key="frameInset" minX="105" minY="170" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Quit"/>
+                                        <connections>
+                                            <action selector="quitGame:" destination="Lhg-Me-WhH" eventType="touchUpInside" id="IO1-iN-nQU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2i-nh-qur">
                                         <frame key="frameInset" minX="102" minY="127" width="36" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Stats"/>
+                                        <connections>
+                                            <segue destination="JiQ-Dd-KqR" kind="presentation" id="3cY-CC-YI8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePH-ND-gqm">
                                         <frame key="frameInset" minX="89" minY="81" width="62" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Continue"/>
+                                        <connections>
+                                            <action selector="continueGame:" destination="Lhg-Me-WhH" eventType="touchUpInside" id="sGg-TE-vnZ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paused" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQP-CJ-zsr">
                                         <frame key="frameInset" minX="92" minY="33" width="57" height="21"/>
@@ -151,6 +160,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="GameplayView" destination="1eA-fl-vh8" id="8Zy-BV-0GY"/>
                         <outlet property="pauseButton" destination="aFZ-ZM-X84" id="Ecr-KL-qyo"/>
                         <outlet property="pauseMenuView" destination="FsY-CI-zwE" id="V2Y-GQ-JgV"/>
                     </connections>
@@ -158,6 +168,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad7-HT-zR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="-305.39730134932535"/>
+        </scene>
+        <!--Game Stats View Controller-->
+        <scene sceneID="bhV-Wv-jJk">
+            <objects>
+                <viewController id="JiQ-Dd-KqR" customClass="GameStatsViewController" customModule="transcendence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rFH-yk-dhE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z2C-cC-Wjp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JXX-JY-1GB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JkM-e8-7ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1526" y="-312"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="G3g-iN-wWN">
