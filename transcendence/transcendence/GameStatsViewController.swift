@@ -8,10 +8,23 @@
 
 import Foundation
 import UIKit
+import SpriteKit
 
 
 class GameStatsViewController: UIViewController {
+    
+    
+    @IBOutlet weak var SpriteImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SpriteImageView.addSubview(SKView())
+        
+        
+    }
+    
+    @IBAction func returnToGamePlayView(segue: UIStoryboardSegue) {
+        
     }
 }

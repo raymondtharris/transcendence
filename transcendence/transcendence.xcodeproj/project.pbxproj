@@ -12,6 +12,7 @@
 		222388031D30CAF400B94255 /* GameTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222388021D30CAF400B94255 /* GameTitleViewController.swift */; };
 		222388051D34A37B00B94255 /* GameStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222388041D34A37B00B94255 /* GameStatsViewController.swift */; };
 		222388081D34AD9B00B94255 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222388071D34AD9B00B94255 /* MetalKit.framework */; };
+		2223880A1D374E7D00B94255 /* GameStatsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 222388091D374E7D00B94255 /* GameStatsScene.sks */; };
 		2244B9511B326C5700B6AC82 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2244B9501B326C5700B6AC82 /* GameViewController.swift */; };
 		2244B9531B32835300B6AC82 /* ShaderTest.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2244B9521B32835300B6AC82 /* ShaderTest.metal */; };
 		22503E121B292F6E00FE316A /* Kahr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22503E111B292F6E00FE316A /* Kahr.swift */; };
@@ -44,6 +45,7 @@
 		222388021D30CAF400B94255 /* GameTitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTitleViewController.swift; sourceTree = "<group>"; };
 		222388041D34A37B00B94255 /* GameStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsViewController.swift; sourceTree = "<group>"; };
 		222388071D34AD9B00B94255 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		222388091D374E7D00B94255 /* GameStatsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameStatsScene.sks; sourceTree = "<group>"; };
 		2244B9501B326C5700B6AC82 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2244B9521B32835300B6AC82 /* ShaderTest.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ShaderTest.metal; sourceTree = "<group>"; };
 		22503E111B292F6E00FE316A /* Kahr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kahr.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				222388021D30CAF400B94255 /* GameTitleViewController.swift */,
 				222388041D34A37B00B94255 /* GameStatsViewController.swift */,
 				222387FE1D30C0FB00B94255 /* GameplayViewController.swift */,
+				222388091D374E7D00B94255 /* GameStatsScene.sks */,
 				228648611B11ACB300CC018C /* Images.xcassets */,
 				228648631B11ACB300CC018C /* LaunchScreen.xib */,
 				228648581B11ACB300CC018C /* Supporting Files */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2223880A1D374E7D00B94255 /* GameStatsScene.sks in Resources */,
 				228648601B11ACB300CC018C /* Main.storyboard in Resources */,
 				228648651B11ACB300CC018C /* LaunchScreen.xib in Resources */,
 				228648621B11ACB300CC018C /* Images.xcassets in Resources */,
