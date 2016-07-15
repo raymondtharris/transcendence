@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreMotion
 import MetalKit
+import SceneKit
 
 class GameplayViewController: UIViewController {
     
@@ -17,7 +18,7 @@ class GameplayViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var pauseMenuView: UIView!
     
-    @IBOutlet var GameplayView: MTKView!
+    @IBOutlet var GameplayView: SCNView!
     
     // IVars
     var loadData = 0
@@ -25,11 +26,11 @@ class GameplayViewController: UIViewController {
     var device:MTLDevice! = nil
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pauseMenuView.isHidden = true
         device = MTLCreateSystemDefaultDevice()
-        
         // Check for loaded data to see if new game or continue.
         
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2215F97E1D38A01600478B88 /* GameStatsSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F97D1D38A01600478B88 /* GameStatsSceneView.swift */; };
 		222387FF1D30C0FB00B94255 /* GameplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222387FE1D30C0FB00B94255 /* GameplayViewController.swift */; };
 		222388011D30C89100B94255 /* TranscendenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222388001D30C89100B94255 /* TranscendenceView.swift */; };
 		222388031D30CAF400B94255 /* GameTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222388021D30CAF400B94255 /* GameTitleViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2215F97D1D38A01600478B88 /* GameStatsSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsSceneView.swift; sourceTree = "<group>"; };
 		222387FE1D30C0FB00B94255 /* GameplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayViewController.swift; sourceTree = "<group>"; };
 		222388001D30C89100B94255 /* TranscendenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscendenceView.swift; sourceTree = "<group>"; };
 		222388021D30CAF400B94255 /* GameTitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTitleViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				222388001D30C89100B94255 /* TranscendenceView.swift */,
 				222388021D30CAF400B94255 /* GameTitleViewController.swift */,
 				222388041D34A37B00B94255 /* GameStatsViewController.swift */,
+				2215F97D1D38A01600478B88 /* GameStatsSceneView.swift */,
 				222387FE1D30C0FB00B94255 /* GameplayViewController.swift */,
 				222388091D374E7D00B94255 /* GameStatsScene.sks */,
 				228648611B11ACB300CC018C /* Images.xcassets */,
@@ -274,6 +277,7 @@
 				22503E121B292F6E00FE316A /* Kahr.swift in Sources */,
 				2286485D1B11ACB300CC018C /* ViewController.swift in Sources */,
 				2286485B1B11ACB300CC018C /* AppDelegate.swift in Sources */,
+				2215F97E1D38A01600478B88 /* GameStatsSceneView.swift in Sources */,
 				2244B9511B326C5700B6AC82 /* GameViewController.swift in Sources */,
 				222388011D30C89100B94255 /* TranscendenceView.swift in Sources */,
 				222387FF1D30C0FB00B94255 /* GameplayViewController.swift in Sources */,
