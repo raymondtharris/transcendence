@@ -12,10 +12,13 @@ import UIKit
 class GameLoadViewController: UIViewController {
     
     
+    @IBOutlet weak var gameLoadTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameLoadTableView.delegate = self
+        gameLoadTableView.dataSource = self
     }
     
     @IBAction func backToTitleScrean(segue: UIStoryboardSegue) {
@@ -27,11 +30,24 @@ class GameLoadViewController: UIViewController {
     }
 }
 
-class GameSaveView: UIView {
-    
-
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
+extension GameLoadViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as! GameLoadViewCell
+        return cell
+    }
+}
+
+
+class GameLoadViewCell: UITableViewCell {
+    @IBOutlet weak var gameLoadTitleLabel: UILabel!
+    @IBOutlet weak var gameLoadPlaytimeLabel: UILabel!
+    @IBOutlet weak var gameLoadProgressLabel: UILabel!
+    @IBOutlet weak var gameLoadProfileImageView: UIImageView!
+    
+    
+    
 }
