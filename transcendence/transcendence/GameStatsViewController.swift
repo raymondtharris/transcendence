@@ -15,20 +15,27 @@ import SceneKit
 class GameStatsViewController: UIViewController {
     
     
-    @IBOutlet weak var gameStatsSCNView: SCNView!
+    @IBOutlet var gameStatsView: SCNView!
+    @IBOutlet weak var gameStatsOverlayView: UIView!
+
     
-    let gameScene = SCNScene()
     var emmileahScene = SCNSphere()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let sphereNode = SCNNode(geometry: emmileahScene)
         
-        gameScene.rootNode.addChildNode(sphereNode)
+        //self.view = SCNView(frame: self.view.frame)
+        gameStatsView.scene?.rootNode.addChildNode(sphereNode)
+        
+        //gameStatsView.rootNode.addChildNode(sphereNode)
         
         
-        gameStatsSCNView.scene = gameScene
-        gameStatsSCNView.backgroundColor = UIColor.blue()
+        //gameStatsSCNView.scene = gameScene
+        gameStatsView.backgroundColor = UIColor.blue()
+        gameStatsView.autoenablesDefaultLighting = true
+        
+        gameStatsOverlayView.layer.cornerRadius = 0.5
     }
     
     @IBAction func returnToGamePlayView(segue: UIStoryboardSegue) {
