@@ -35,10 +35,10 @@ class GameStatsViewController: UIViewController {
         gameStatsView.backgroundColor = UIColor.blue()
         gameStatsView.autoenablesDefaultLighting = true
         
-        gameStatsOverlayView.layer.cornerRadius = 0.5
+        gameStatsOverlayView.layer.cornerRadius = 10.0
     }
     
     @IBAction func returnToGamePlayView(segue: UIStoryboardSegue) {
-        
+        segue.sourceViewController.dismiss(animated: true, completion: nil)
     }
 }
